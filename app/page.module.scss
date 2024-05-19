@@ -1,0 +1,38 @@
+.home {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    // align-items: center;
+    // justify-content: center;
+
+    .showCard {
+        display: flex;
+        flex-direction: column;
+        width: 330px;
+        text-decoration: none;
+        color: black;
+
+        .showImg {
+            border-radius: 8px;
+            width: 100%;
+
+        }
+
+        .title {
+            width: 80%;
+            font-weight: 700;
+        }
+    
+
+        &:hover {
+            transform: scale(1.05);
+            transition: ease-in-out 200ms;
+        }
+    }
+
+    .card:hover {
+        transform: scale(1.1);
+    }
+}
