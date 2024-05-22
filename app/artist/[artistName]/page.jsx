@@ -1,14 +1,14 @@
-// import { connectToMongo } from '@/server/connectToMongo'
+import { connectToMongo } from '@/server/connectToMongo'
 import { getShowsByArtist } from '@/server/events/show.service'
 import styles from './style.module.scss'
 import Link from 'next/link'
 
 export default async function page({params}) {
 
+  await connectToMongo()
   const artistName = params.artistName
   const shows = await getShowsByArtist(artistName)
 // console.log(shows);
-  // await connectToMongo()
 
   return (
     <div className={styles.homeContainer}>
