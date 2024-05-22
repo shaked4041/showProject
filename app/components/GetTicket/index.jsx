@@ -15,12 +15,12 @@ export default function index() {
         }
     }
     return (
-        <div>
-            <button onClick={handlePlus}>
+        <div className={styles.getTicket}>
+            <button className={styles.btn} onClick={handlePlus} >
                 +
             </button>
-            <span>{amnt}</span>
-            <button onClick={handleMinus}>
+            <span className={styles.num}>{amnt}</span>
+            <button className={styles.btn} onClick={handleMinus}>
                 -
             </button>
         </div>

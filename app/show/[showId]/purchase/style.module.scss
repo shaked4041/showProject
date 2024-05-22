@@ -61,11 +61,26 @@
                     width: 100px;
                     height: 100px;
                     border-radius: 15px;
+                    // padding: 10px;
                 }
 
                 .details{
                     display: flex;
                     flex-direction: column;
+                    padding-left: 10px;
+                    .artist{
+                        color: white;
+                        font-size: 22px;
+                        
+                    }
+                    .locationCont{
+                        color:#a29bb1 ;
+                        font-size: 18px;
+                    }
+                    .dateCont{
+                        color:#a29bb1 ;
+                        font-size: 18px;
+                    }
                 }
             }
 
@@ -76,7 +91,14 @@
                 margin-bottom: 20px;
                 background: rgb(20, 13, 42);
                 background: linear-gradient(0deg, rgba(20, 13, 42, 1) 5%, rgba(67, 57, 97, 1) 92%);
-
+                padding: 10px;
+                .priceTicket{
+                    display: flex;
+                    // flex-direction: column;
+                    // align-content: center;
+                    justify-content: center;
+                   
+                }
             }
 
             .category {
