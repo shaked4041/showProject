@@ -6,9 +6,9 @@ import styles from './style.module.scss'
 
 const NavLink = ({ href, children }) => {
    const path = usePathname()
-
+   const isActive = path === href;
    return (
-      <Link href={href} style={{ color: path === href ? 'red' : 'white' }}>
+      <Link className={`${styles.navLink} ${isActive ? styles.active : ''}`} href={href} >
          {children}
       </Link>
    )

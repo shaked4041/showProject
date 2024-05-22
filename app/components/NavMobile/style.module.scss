@@ -1,0 +1,11 @@
+.navContainer {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+
+    .navIcon {
+        cursor: pointer;
+        font-size: 25px;
+        margin-left: 10px;
+    }
+}
