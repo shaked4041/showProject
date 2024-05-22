@@ -9,16 +9,20 @@ export default async function Home() {
   
   const shows = await getAllShows()
   return (
+    <div className={styles.homeContainer}>
     <div className={styles.home}>
       {shows.map(show => {
         return <li key={show._id}>
-          <Link href={`/${show._id}`} className={styles.showCard}as={`/${show._id}`} passHref>
+          <Link href={`/show/${show._id}`} className={styles.showCard}>
           <img className={styles.showImg} width={330} height={320} src={show.picture_of_artist} alt={show.title} />
+           <h3>
             {show.title}
+            </h3> 
           </Link>
         </li>
       })}
     </div>
+      </div>
   )
 }
 

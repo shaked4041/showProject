@@ -43,4 +43,5 @@ const ShowSchema = new mongoose.Schema({
     }
 })
 
-export const ShowModel = mongoose.models.Shows || mongoose.model('Shows', ShowSchema)
+
+export const ShowModel = mongoose.models?.Shows || mongoose.model('Shows', ShowSchema)

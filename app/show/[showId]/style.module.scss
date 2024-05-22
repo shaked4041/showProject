@@ -1,0 +1,111 @@
+.showContainer {
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+    .innerCont {
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+
+
+        .picture {
+            width: 500px;
+            height: 500px;
+            border-radius: 25px;
+            margin: 20px;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+
+
+            .innerInfo {
+                padding-bottom: 20px;
+                border-bottom: 1px solid var(--hover-main);
+                font-size: 20px;
+                font-weight: 500;
+                // gap: 15px;
+
+                .des {
+                    font-size: 25px;
+                    font-weight: 600;
+                    padding-top: 20px;
+                    color:  #a492ea;
+                    align-items: center;
+                 }
+
+                .artistCont {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    margin-top: 20px;
+
+                    .artistName {
+                        color: var(--hover-main);
+                        cursor: pointer;
+                        text-decoration: none;
+                    }
+                }
+
+                .locationCont {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 5px;
+                }
+
+                .dateCont {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 5px;
+                }
+
+            }
+
+            .extraInfo {
+                display: flex;
+                flex-direction: column;
+                font-size: 14px;
+                padding-left: 15px;
+                padding-top: 10px;
+                gap: 7px;
+                margin-bottom: 20px;
+            }
+
+            
+
+            .getTicket {
+                text-decoration: none;
+                display: flex;
+                width: 90%;
+                height: 60px;
+                background-color: white;
+                color: black;
+                z-index: 5;
+                align-items: center;
+                justify-content: center;
+                border-radius: 8px;
+                border: none;
+                cursor: pointer;
+                box-shadow: 4px 4px 30px 4px rgba(255, 255, 255, 0.22);
+                color: var(--main-color);
+                font-size: 27px;
+                font-weight: 600;
+                margin-top: auto;
+
+                &:hover {
+                    background-color: var(--hover-main);
+                    color: white;
+                }
+            }
+        }
+
+    }
+}
