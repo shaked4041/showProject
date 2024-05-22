@@ -15,10 +15,10 @@ export default async function index({ params }) {
   const pic = show.picture_of_artist
   const date = show.date
   const formatedFullDate = moment(date).format('MMM D, YYYY h:mm A');
-  const titel= "Standart Ticket"///צריך לייבא מהדאטא
-  const subTitel ="General admission entry into the event"///צריך לייבא מהדאטא
+  const titel = "Standart Ticket"///צריך לייבא מהדאטא
+  const subTitel = "General admission entry into the event"///צריך לייבא מהדאטא
   const price = show.price_per_ticket
- 
+
   return (
     <div className={styles.purchContainer}>
       <div className={styles.bodyCont}>
@@ -54,8 +54,11 @@ export default async function index({ params }) {
             <h2>
               {show.title}
             </h2>
-<div className={styles.priceTicket}>
-            <PriceTicket title={titel} subTitel={subTitel} price={price} />
+            <div className={styles.priceTicket}>
+              <PriceTicket title={titel} subTitel={subTitel} price={price} />
+            </div>
+            <div>
+              <ContinueButton/>
             </div>
           </div>
         </div>
