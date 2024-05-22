@@ -3,13 +3,17 @@ import { getShowById } from '@/server/events/show.service'
 import styles from './style.module.scss'
 import Link from 'next/link'
 import GetTicket from '@/app/components/GetTicket'
-import { IoChevronBackOutline } from "react-icons/io5";
+import { IoChevronBackOutline, IoLocationSharp } from "react-icons/io5";
 import { IoMdClose } from "react-icons/io";
+import { FaRegCalendarCheck } from 'react-icons/fa'
+import moment from 'moment'
 
 export default async function index({ params }) {
   const showId = params.showId
   const show = await getShowById(showId)
   const pic = show.picture_of_artist
+  const date = show.date
+  const formatedFullDate = moment(date).format('MMM D, YYYY h:mm A');
   return (
     <div className={styles.purchContainer}>
       <div className={styles.bodyCont}>
@@ -26,7 +30,20 @@ export default async function index({ params }) {
 
         <div className={styles.pageBody}>
           <div className={styles.bodyLeft}>
-            <h1 className={styles.artist}>{show.artist}</h1>
+            <img src={pic} alt={show.artist} className={styles.picture} />
+            <div className={styles.details}>
+              <span>{show.title}</span>
+              <span>{show.artist}</span>
+              <div className={styles.locationCont}>
+                <IoLocationSharp />
+                <span>{show.location}</span>
+              </div>
+
+              <div className={styles.dateCont}>
+                <FaRegCalendarCheck />
+                <span>{formatedFullDate}</span>
+              </div>
+            </div>
           </div>
           <div className={styles.bodyRight}>
             <h2>
