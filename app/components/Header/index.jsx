@@ -19,7 +19,7 @@ export default function Header() {
 
 
     return (
-        <div className={styles.headerContainer}>
+        <div className={`${styles.headerContainer} ${isOpen ? styles.openContainer : ''}`}>
             <CgDetailsMore className={styles.navIcon} onClick={handleNav} />
 
             <div className={`${styles.navMobile} ${isOpen ? styles.open : ''}`}>
