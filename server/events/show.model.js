@@ -5,6 +5,18 @@ const ShowSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    artistId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'artist'
+    },
+    creatorName: {  
+        type: String,
+        required: true
+    },
+    creatorId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'user' //must be admin
+    },
     category: {
         type: String,
         required: true
@@ -17,10 +29,10 @@ const ShowSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    production: {
-        type: String,
-        required: true
-    },
+    // production: {
+    //     type: String,
+    //     required: true
+    // },
     date: {
         type: Date,
         required: true

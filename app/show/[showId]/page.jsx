@@ -24,54 +24,55 @@ export default async function page({ params }) {
         <div className={styles.info}>
           <div className={styles.innerInfo}>
 
-            <h1>{show.title}
-              {/* <LuDot />
-              {show.category} */}
-            </h1>
+            <h1>{show.title}</h1>
 
-            <span className={styles.des}>
-              {show.description}
-            </span>
+            <div className={styles.detailedInfo}>
+              <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius quia nisi laboriosam tempora saepe, eligendi cupiditate praesentium ullam vitae debitis numquam? Excepturi eum consectetur quod, soluta minus natus quasi dignissimos unde cupiditate non quas vel necessitatibus est. Omnis, eos autem.</div>
 
-            <div className={styles.artistCont}>
-              <span>{show.production}</span>
-              <LuDot />
-              <Link href={`/artist/${show.artist}`} className={styles.artistName}>
-                <span >{show.artist}</span>
-              </Link>
+              <span className={styles.des}>
+                {show.description}
+              </span>
+
+              <div className={styles.artistCont}>
+                <span>{show.production}</span>
+                <LuDot />
+                <Link href={`/artist/${show.artist}`} className={styles.artistName}>
+                  <span >{show.artist}</span>
+                </Link>
+              </div>
+
+              <div className={styles.locationCont}>
+                <IoLocationSharp />
+                <span>{show.location}</span>
+              </div>
+
+              <div className={styles.dateCont}>
+                <FaRegCalendarCheck />
+                <span>{formatedFullDate}</span>
+              </div>
+
+            <ul className={styles.extraInfo}>
+              <li>
+                {partDate}
+              </li>
+              <li>
+                {show.production}
+              </li>
+            </ul>
+
+            <div className={styles.whatsupDits}>
+              <div>
+                Table Reservations:
+              </div>
+              WhatsApp:
+              <div>
+                +1 (718) 614-2563
+              </div>
+              Email: info@tcepresents.com
             </div>
 
-            <div className={styles.locationCont}>
-              <IoLocationSharp />
-              <span>{show.location}</span>
-            </div>
-
-            <div className={styles.dateCont}>
-              <FaRegCalendarCheck />
-              <span>{formatedFullDate}</span>
             </div>
           </div>
-
-          <ul className={styles.extraInfo}>
-            <li>
-              {partDate}
-            </li>
-            <li>
-              {show.production}
-            </li>
-          </ul>
-
-          <div>
-            <div>
-              Table Reservations:
-            </div>
-            WhatsApp:
-            <div>
-              +1 (718) 614-2563
-            </div>
-            Email: info@tcepresents.com
-          </div>
-
           <Link className={styles.getTicket} href={`/show/${show._id}/purchase`}>
             ORDER TICKETS
           </Link>

@@ -17,3 +17,21 @@ body {
   background-color: var(--main-color);
   font-family: "Poppins", sans-serif;
 }
+
+
+
+@media (width< 700px) {
+
+  body:has(#search:checked) {
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+@media (width> 700px) {
+
+  body:has(#s:not(:placeholder-shown)) {
+    height: 100vh;
+    overflow: hidden;
+  }
+}

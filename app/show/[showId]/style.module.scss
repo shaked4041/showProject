@@ -1,44 +1,59 @@
 .showContainer {
     width: 100%;
-    height: calc(100vh - 100px);
+    min-height: calc(100vh - 100px);
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
+    padding-top: 25px;
 
     .innerCont {
         display: flex;
         flex-direction: row;
-        width: 80%;
+        align-items: center;
+        gap: 20px;
+        max-width: 80%;
 
 
         .picture {
             width: 500px;
             height: 500px;
             border-radius: 25px;
-            margin: 20px;
         }
 
         .info {
             display: flex;
             flex-direction: column;
-            padding-top: 20px;
+            // height: 500px;
+
 
 
             .innerInfo {
                 padding-bottom: 20px;
                 border-bottom: 1px solid var(--hover-main);
+                margin-bottom: 20px;
                 font-size: 20px;
                 font-weight: 500;
-                // gap: 15px;
+                position: relative;
+
+                .detailedInfo {
+                    overflow: auto;
+                    -ms-overflow-style: none;
+                    scrollbar-width: none;
+                    max-height: 300px;
+
+                    .detailedInfo::-webkit-scrollbar {
+                        display: none;
+                    }
+                }
 
                 .des {
                     font-size: 25px;
                     font-weight: 600;
                     padding-top: 20px;
-                    color:  #a492ea;
+                    color: #a492ea;
                     align-items: center;
-                 }
+                }
 
                 .artistCont {
                     display: flex;
@@ -79,7 +94,12 @@
                 margin-bottom: 20px;
             }
 
-            
+            .whatsupDits {
+                padding-bottom: 30px;
+
+            }
+
+
 
             .getTicket {
                 text-decoration: none;
@@ -99,6 +119,10 @@
                 font-size: 27px;
                 font-weight: 600;
                 margin-top: auto;
+                // position: fixed;
+                // bottom: 30px;
+                // right: 60px;
+
 
                 &:hover {
                     background-color: var(--hover-main);
@@ -109,10 +133,48 @@
 
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 800px) {
 
-        
+        .innerCont {
+            flex-direction: column;
+            position: relative;
+
+            .picture {
+                width: 90%;
+            }
+
+            .info {
+                overflow: hidden;
+                padding-bottom: 100px;
+
+            }
+
+            .whatsupDits {
+                gap: 20px;
+            }
+
+            .getTicket {
+                position: fixed;
+                bottom: 20px;
+                right: 35px;
+                width: 100%;
+            }
+        }
     }
 
+    @media (min-width: 700px) {
+
+        .innerCont {
+            width: 100%;
+        }
+
+        .info {
+            max-height: 600px;
+
+            .getTicket {
+                width: 100%;
+            }
+        }
+    }
 
 }

@@ -6,6 +6,40 @@
     padding: 5px;
     border-radius: 25px;
     align-items: center;
+    transition: all 0.3s ease;
+
+    .closeButton {
+        display: none;
+    }
+
+    .searchBody {
+        display: none;
+        background-color: black;
+        height: calc(100vh - 200px);
+        position: fixed;
+        top: 200px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%
+    }
+
+    .saerchInnerCont {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .searchHeader {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-left: 10px;
+    }
+
+    .searchIcon {
+        display: none;
+    }
+
 
     .inputSearch {
         background-color: transparent;
@@ -13,6 +47,13 @@
         padding: 10px;
         outline: none;
         color: white;
+        transition: all 0.3s ease;
+    }
+
+    .inputSearch:focus {
+        border: none;
+        /* Remove border when the input is focused */
+        outline: none;
     }
 
     .searchButton {
@@ -20,21 +61,146 @@
         color: white;
         border: none;
         cursor: pointer;
-        padding:8px;
+        padding: 8px;
         border-radius: 50%;
         margin: 5px;
+        transition: all 0.3s ease;
 
         &:hover {
             background-color: var(--hover-main);
         }
     }
+
+    &:has(>form> div> div > input[type=text]:not(:placeholder-shown)) {
+        .searchBody {
+            position: fixed;
+            top: 100px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border-radius: 0;
+            justify-content: center;
+            padding: 10px;
+            z-index: 100;
+            height: calc(100vh - 100px);
+            background-color: black;
+        }
+
+
+        .inputSearch {
+            padding: 10px;
+            outline: none;
+            color: white;
+            position: relative;
+            z-index: 101;
+            transition: all 0.3s ease;
+        }
+
+
+        .searchBody {
+            display: block;
+        }
+    }
 }
 
+@media (min-width: 700px) {}
+
 @media (max-width: 700px) {
-    .inputSearch{
-        display: none;
+    .search:has(>form> div> div > input[type=text]:not(:placeholder-shown)) {
+        .searchBody {
+            position: fixed;
+            top: 200px;
+            height: calc(100vh - 200px);
+        }
     }
-    .searchButton{
+
+    .search {
+        background-color: var(--main-color);
+        height: 100px;
         margin-left: auto;
+        display: flex;
+        flex-direction: row;
+        // background-color: transparent;
+
+
+        .saerchInnerCont {
+            display: flex;
+            flex-direction: column;
+            background-color: var(--main-color);
+
+        }
+
+        .inputSearch {
+            display: none;
+            outline: none;
+
+        }
+
+        .searchIcon {
+            display: block;
+        }
+
+        form {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .searchButton {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .searchIconNotMobile {
+            display: none;
+        }
+
+        &:has(input:checked) {
+            position: fixed;
+            top: 100px;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: var(--main-color);
+            border-radius: 0;
+            justify-content: center;
+            padding: 10px;
+            z-index: 100;
+
+            .searchBody {
+                display: block;
+                background-color: black;
+            }
+
+            .searchHeader {
+                background-color: var(--second-main);
+                border-radius: 30px;
+                padding: 8px;
+            }
+
+            .searchIconNotMobile {
+                display: block;
+            }
+
+            .searchIcon {
+                display: none;
+            }
+
+            .closeButton {
+                display: block;
+                margin-left: auto;
+            }
+
+            .inputSearch {
+                display: block;
+                width: 80%;
+                outline: none;
+                background-color: transparent;
+            }
+        }
+
+        .closeButton {
+            display: none;
+        }
     }
 }
