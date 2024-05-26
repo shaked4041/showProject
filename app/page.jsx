@@ -52,20 +52,20 @@ async function createShow({
   }
 }
 
-createShow({
-  artist: 'Taylor Swift',
-  artistId: '664e0c1b0e1d0ad12a33c7dc', // Example ObjectId
-  creatorName: 'John Dow',
-  creatorId: '664e09b1959c493a8d50894e', // Example ObjectId (admin user)
-  category: 'Music',
-  location: 'New York',
-  price_per_ticket: '50',
-  date: new Date('2024-06-01T19:00:00'),
-  amount_of_tickets: 100,
-  picture_of_artist: 'https://upload.wikimedia.org/wikipedia/en/f/f8/Taylor_Swift_-_Folklore.png',
-  title: 'Concert Title',
-  description: 'Concert description'
-});
+// createShow({
+//   artist: 'Taylor Swift',
+//   artistId: '664e0c1b0e1d0ad12a33c7dc', // Example ObjectId
+//   creatorName: 'John Dow',
+//   creatorId: '664e09b1959c493a8d50894e', // Example ObjectId (admin user)
+//   category: 'Music',
+//   location: 'New York',
+//   price_per_ticket: '50',
+//   date: new Date('2024-06-01T19:00:00'),
+//   amount_of_tickets: 100,
+//   picture_of_artist: 'https://upload.wikimedia.org/wikipedia/en/f/f8/Taylor_Swift_-_Folklore.png',
+//   title: 'Concert Title',
+//   description: 'Concert description'
+// });
 
 // const createArtists = async () => {
 //   try {

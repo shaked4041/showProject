@@ -8,6 +8,10 @@ import NavLink from '../NavLink';
 import NavMobile from '../NavMobile/index';
 import { useState } from 'react';
 import { CgDetailsMore } from 'react-icons/cg';
+import Link from 'next/link'
+import { AiFillPlusCircle } from "react-icons/ai";
+
+
 
 export default function Header() {
 
@@ -23,7 +27,7 @@ export default function Header() {
             <CgDetailsMore className={styles.navIcon} onClick={handleNav} />
 
             <div className={`${styles.navMobile} ${isOpen ? styles.open : ''}`}>
-                <NavMobile isOpen={isOpen} setIsOpen={setIsOpen}/>
+                <NavMobile isOpen={isOpen} setIsOpen={setIsOpen} />
             </div>
 
             <NavLink href='/'><div className={styles.titleHeader}>TicketsForU</div></NavLink>
@@ -31,10 +35,13 @@ export default function Header() {
                 <Nav />
             </div>
             <Search className={styles.searchComp} />
-            <div className={styles.signIn}>
-                <FaUser className={styles.icon} />
-                <span className={styles.signText}>Sign In/Register</span>
-            </div>
+            <Link href={'/addShow'} className={styles.plusIcon}><AiFillPlusCircle /></Link>
+            <Link href={'/login'} className={styles.loginLink}>
+                <div className={styles.signIn}>
+                    <FaUser className={styles.icon} />
+                    <span className={styles.signText}>Sign In/Register</span>
+                </div>
+            </Link>
         </div>
     )
 }
