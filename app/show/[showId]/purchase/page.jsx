@@ -8,6 +8,7 @@ import { IoMdClose } from "react-icons/io";
 import { FaRegCalendarCheck } from 'react-icons/fa'
 import moment from 'moment'
 import PriceTicket from '@/app/components/PriceTicket'
+import ContinueButton from '@/app/components/ContinueButton'
 
 export default async function index({ params }) {
   const showId = params.showId
