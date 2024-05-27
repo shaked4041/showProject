@@ -19,3 +19,13 @@ export const createArtist = async (fullName, image, description) => {
         throw error;
     }
 };
+
+export const getArtists = async () => {
+    try {
+        const artists = await ArtistModel.find();
+        return artists;
+    } catch (error) {
+        console.error('Error retrieving artists:', error.message);
+        throw error;
+    }
+};

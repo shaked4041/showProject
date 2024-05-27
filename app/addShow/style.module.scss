@@ -1,0 +1,60 @@
+.formContainer {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+
+
+    .inputLabel {
+        display: flex;
+        align-items: center;
+
+
+        .inputText {
+            background-color: var(--hover-main);
+            border: 0px;
+            padding: 10px;
+            border-radius: 12px;
+            margin: 10px;
+
+            &::placeholder {
+                color: rgba(255, 255, 255, 0.362);
+            }
+        }
+
+    }
+
+.desCont{
+   display: flex;
+   flex-direction: row;
+
+    .inputLabelTextarea {
+        padding-top: 10px;
+    }
+    
+    .inputTextarea {
+        background-color: var(--hover-main);
+        border: 0px;
+        padding: 10px;
+        border-radius: 12px;
+        margin: 10px;
+    }
+
+    }
+
+    .artistOptions {
+        padding: 10px;
+        border-radius: 14px;
+        background-color: var(--hover-main);
+        color: white;
+        margin: 10px;
+
+        .artistSingle {
+            background-color: var(--hover-main);
+            color: white;
+
+        }
+
+    }
+}
