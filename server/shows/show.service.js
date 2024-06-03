@@ -1,4 +1,5 @@
 import { ShowModel } from "./show.model";
+import showController, { createShow } from "./show.controller";
 
 export const getAllShows = () => {
   return ShowModel.find()
@@ -15,3 +16,6 @@ export const getShowsByCategory = async (category) => {
 export const getShowsByArtist = async (artist) =>{
   return await ShowModel.find({artist: artist})
 }
+
+
+export const createNewShowService = (show) =>  ShowModel.create(show)

@@ -1,22 +1,24 @@
 const mongoose = require('mongoose')
+require ('../artists/artist.model')
+require ('../users/user.model')
 
 const ShowSchema = new mongoose.Schema({
     artist: {
         type: String,
         required: true
     },
-    artistId: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'artist'
-    },
+    // artistId: {
+    //     type: mongoose.Schema.Types.ObjectId,
+    //     ref: 'artist'
+    // },
     creatorName: {  
         type: String,
         required: true
     },
-    creatorId: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'user' //must be admin
-    },
+    // creatorId: {
+    //     type: mongoose.Schema.Types.ObjectId,
+    //     ref: 'user' //must be admin
+    // },
     category: {
         type: String,
         required: true
@@ -34,7 +36,7 @@ const ShowSchema = new mongoose.Schema({
     //     required: true
     // },
     date: {
-        type: Date,
+        type: String,
         required: true
     },
     amount_of_tickets: {

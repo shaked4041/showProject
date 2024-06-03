@@ -1,4 +1,4 @@
-import { getShowById } from '@/server/events/show.service'
+import { getShowById } from '@/server/shows/show.service'
 import styles from './style.module.scss'
 import Link from 'next/link'
 import { IoLocationSharp } from "react-icons/io5";
@@ -51,25 +51,25 @@ export default async function page({ params }) {
                 <span>{formatedFullDate}</span>
               </div>
 
-            <ul className={styles.extraInfo}>
-              <li>
-                {partDate}
-              </li>
-              <li>
-                {show.production}
-              </li>
-            </ul>
+              <ul className={styles.extraInfo}>
+                <li>
+                  {partDate}
+                </li>
+                <li>
+                  {show.production}
+                </li>
+              </ul>
 
-            <div className={styles.whatsupDits}>
-              <div>
-                Table Reservations:
+              <div className={styles.whatsupDits}>
+                <div>
+                  Table Reservations:
+                </div>
+                WhatsApp:
+                <div>
+                  +1 (718) 614-2563
+                </div>
+                Email: info@tcepresents.com
               </div>
-              WhatsApp:
-              <div>
-                +1 (718) 614-2563
-              </div>
-              Email: info@tcepresents.com
-            </div>
 
             </div>
           </div>

@@ -5,6 +5,7 @@
     flex-direction: column;
     align-items: center;
 
+
     .bodyCont {
         width: 80%;
         display: flex;
@@ -70,9 +71,11 @@
                     padding-left: 10px;
 
                     .artist {
-                        color: white;
+                        color: rgb(255, 255, 255);
                         font-size: 22px;
-
+                        //   max-width: 20px;
+                          display: block;
+                          flex-wrap: wrap;
                     }
 
                     .locationCont {

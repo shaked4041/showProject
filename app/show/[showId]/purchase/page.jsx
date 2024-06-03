@@ -1,5 +1,5 @@
 import React from 'react'
-import { getShowById } from '@/server/events/show.service'
+import { getShowById } from '@/server/shows/show.service'
 import styles from './style.module.scss'
 import Link from 'next/link'
 import GetTicket from '@/app/components/GetTicket'
@@ -59,7 +59,7 @@ export default async function index({ params }) {
               <PriceTicket title={titel} subTitel={subTitel} price={price} />
             </div>
             <div>
-              <ContinueButton/>
+              <ContinueButton />
             </div>
           </div>
         </div>
