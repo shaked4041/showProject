@@ -1,4 +1,4 @@
-import { ArtistModel } from './artist.model'; // Adjust the path to where the model file is located
+import  ArtistModel  from './artist.model'; // Adjust the path to where the model file is located
 
 export const createArtist = async (fullName, image, description) => {
     if (!fullName || !image || !description) {
@@ -13,7 +13,7 @@ export const createArtist = async (fullName, image, description) => {
         });
         const savedArtist = await newArtist.save();
         console.log('Artist created successfully:', savedArtist);
-        return savedArtist;
+        return savedArtist.toObject ? savedArtist.toObject() : JSON.parse(JSON.stringify(savedArtist));
     } catch (error) {
         console.error('Error creating artist:', error.message);
         throw error;
@@ -29,3 +29,13 @@ export const getArtists = async () => {
         throw error;
     }
 };
+
+
+export const createNewArtistService = async (artist) => {
+    console.log("serviceeeee", artist);
+    return await ArtistModel.create(artist)
+}
+
+export const getArtistById = async (id) => {
+    return await ArtistModel.findById(id);
+}

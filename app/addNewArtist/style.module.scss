@@ -1,0 +1,41 @@
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.formContainer {
+    margin: 15px;
+    border-radius: 15px;
+    max-width: 600px;
+    background: rgb(20, 13, 42);
+    background: linear-gradient(0deg, rgba(20, 13, 42, 1) 5%, rgba(67, 57, 97, 1) 92%);
+    justify-content: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.inputLabel {
+    display: flex;
+    align-items: center;
+}
+
+.inputText {
+    background-color: var(--main-color);
+    border: 0px;
+    padding: 10px;
+    border-radius: 12px;
+    margin: 10px;
+    color: white;
+    margin-left: 20px;
+    flex-grow: 1;
+
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.362);
+    }
+}

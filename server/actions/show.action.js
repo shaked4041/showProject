@@ -5,18 +5,21 @@ import { createNewShowService } from "../shows/show.service";
 
 export const createNewShow = async (fd) => {
     const obj = Object.fromEntries(fd);
+    const parsedDateTime = new Date(obj.dateTime);
+
+    console.log("show objectttttt", parsedDateTime);
     try {
         await connectToMongo()
         const showModelFill = {
-            // creatorId: '664e09b1959c493a8d50894e0',
+            creatorId: '664e09b1959c493a8d50894e0',
             amount_of_tickets: 300,
-            picture_of_artist: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Smiley.svg/1200px-Smiley.svg.png',
+            picture_of_artist: 'https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?cs=srgb&dl=pexels-jonaskakaroto-736230.jpg&fm=jpg',
             creatorName: 'shaked ben hamo',
-            // artistId: '664e0dea0e1d0ad12a33c7e3'
         }
-        const newShow = {...obj, ...showModelFill }
+        const newShow = { ...obj, ...showModelFill, date: parsedDateTime };
         const newShowFromDb = await createNewShowService(newShow)
         console.log({ newShowFromDb });
+        return { message: 'created' };
     } catch (error) {
         console.log(error);
         return { message: 'not created' }

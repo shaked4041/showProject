@@ -6,7 +6,7 @@ import { UserModel } from '@/server/users/user.model';
 import { createUser } from '@/server/users/user.service';
 import { createArtist } from '@/server/artists/artist.service';
 import { ArtistModel } from '@/server/artists/artist.model';
-import { ShowModel } from '@/server/shows/show.model';
+import  ShowModel  from '@/server/shows/show.model';
 
 export default async function Home() {
 

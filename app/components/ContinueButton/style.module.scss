@@ -1,0 +1,41 @@
+.buyTicketContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.buyTicket {
+    text-decoration: none;
+    display: flex;
+    width: 90%;
+    height: 60px;
+    background-color: white;
+    color: black;
+    z-index: 5;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 4px 4px 30px 4px rgba(255, 255, 255, 0.22);
+    color: var(--main-color);
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: auto;
+    position: absolute;
+    bottom: 10px;
+
+}
+
+.textTicket{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-left: 1px solid rgb(162, 155, 177);
+    height: 35px;
+    font-size: 11px;
+    font-weight: 400;
+    align-items: center;
+    justify-content: center;
+}
+

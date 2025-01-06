@@ -6,17 +6,8 @@
     width: 100%;
 }
 
-// .secondCont{
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: center;
-    //     // width: 100vw;
-    
-    // }
-    
-    
-    .formContainer {
-        margin: 15px;
+.formContainer {
+    margin: 15px;
     border-radius: 15px;
     max-width: 600px;
     background: rgb(20, 13, 42);
@@ -60,6 +51,7 @@
         }
 
         .inputTextarea {
+            color: white;
             background-color: var(--main-color);
             border: 0px;
             padding: 10px;
@@ -84,8 +76,8 @@
 
     }
 
-    .createButton{
-        background-color:var(--hover-main);
+    .createButton {
+        background-color: var(--hover-main);
         color: white;
         padding: 16px;
         border-radius: 20px;
@@ -94,7 +86,7 @@
     }
 }
 
-.addArtistButton{
+.addArtistButton {
     background-color: var(--main-color);
     border: 0px;
     padding: 10px;
@@ -103,7 +95,7 @@
     color: white;
     cursor: pointer;
 
-    &:hover{
+    &:hover {
         background-color: var(--second-main);
     }
 }
