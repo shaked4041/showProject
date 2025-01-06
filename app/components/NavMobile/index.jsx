@@ -3,13 +3,11 @@ import NavLink from '../NavLink'
 import { categoriesList } from '@/utils/category'
 import { IoMdClose } from 'react-icons/io'
 
-
 export default function index({ isOpen, setIsOpen }) {
 
   const handleColse = () => {
-setIsOpen(!isOpen)
+    setIsOpen(!isOpen)
   }
-  // ${isOpen ? styles.open : ''}
   return (
     <div className={`${styles.navMain}`}>
       <IoMdClose onClick={handleColse} />

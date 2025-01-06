@@ -2,7 +2,6 @@
 import styles from './style.module.scss'
 import { IoSearchSharp } from "react-icons/io5";
 import { useRouter } from 'next/navigation'
-import { useEffect, useState } from 'react';
 import { IoMdClose } from 'react-icons/io';
 
 

@@ -11,11 +11,9 @@ export default async function page({ params }) {
   const artist = await getArtistById(artistId)
   console.log(artist);
   const shows = await getShowsByArtist(artistId)
-  // console.log(shows);
 
   return (
     <div className={styles.homeContainer}>
-      {/* <img height={420} src={artist.image} alt={artist.fullName} className={styles.img}/>  */}
       <div className={styles.artistName}>{artist.fullName}</div>
       <div className={styles.bodyContainer}>
         <div className={styles.left}>

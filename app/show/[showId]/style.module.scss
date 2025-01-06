@@ -24,9 +24,6 @@
         .info {
             display: flex;
             flex-direction: column;
-            // height: 500px;
-
-
 
             .innerInfo {
                 padding-bottom: 20px;
@@ -119,10 +116,6 @@
                 font-size: 27px;
                 font-weight: 600;
                 margin-top: auto;
-                // position: fixed;
-                // bottom: 30px;
-                // right: 60px;
-
 
                 &:hover {
                     background-color: var(--hover-main);

@@ -52,7 +52,6 @@
 
     .inputSearch:focus {
         border: none;
-        /* Remove border when the input is focused */
         outline: none;
     }
 
@@ -120,8 +119,6 @@
         margin-left: auto;
         display: flex;
         flex-direction: row;
-        // background-color: transparent;
-
 
         .saerchInnerCont {
             display: flex;

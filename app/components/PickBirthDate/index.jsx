@@ -6,7 +6,7 @@ import DatePicker from "react-datepicker";
 import 'react-datepicker/dist/react-datepicker.css';
 
 export default function PickSBirthDate() {
-    const [startDate, setStartDate] = useState(null);  // Set initial state to null
+    const [startDate, setStartDate] = useState(null); 
     const dateTimeRef = useRef(null);
 
     const handleDateChange = (date) => {

@@ -7,8 +7,6 @@ export default async function page({ params }) {
   const categotyName = params.categoryName
   const shows = await getShowsByCategory(categotyName)
 
-  // connectToMongo()
-
   return (
     <div className={styles.homeContainer}>
       <div className={styles.home}>

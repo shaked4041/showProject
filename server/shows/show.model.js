@@ -1,6 +1,4 @@
 const mongoose = require('mongoose')
- import ArtistModel from '../artists/artist.model';
- import UserModel from '../users/user.model'; // Import if used elsewhere
 
 const ShowSchema = new mongoose.Schema({
     artist: {

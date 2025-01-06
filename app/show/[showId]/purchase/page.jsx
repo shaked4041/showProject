@@ -25,12 +25,9 @@ export default async function page({ params }) {
   };
   
 
-  // const pic = show.picture_of_artist
-  // const date = show.date
-  // const price = show.price_per_ticket
   const partDate = moment(serializedShow.date).format('MMM D, YYYY');
-  const subTitel = "General admission entry into the event"///צריך לייבא מהדאטא
-
+  const subTitel = "General admission entry into the event"
+  
   return (
     <div className={styles.purchContainer}>
       <div className={styles.bodyCont}>

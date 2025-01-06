@@ -5,7 +5,6 @@
     flex-direction: column;
     align-items: center;
 
-
     .bodyCont {
         width: 80%;
         display: flex;
@@ -26,7 +25,6 @@
                 gap: 15px;
                 text-decoration: none;
                 color: white;
-                // padding-left: 20px;
 
                 .backIcon {
                     font-size: 30px;
@@ -135,7 +133,6 @@
                         margin-top: auto;
                         position: absolute;
                         bottom: 10px;
-                        // top: 10;
                     }
                 }
             }
@@ -197,44 +194,44 @@
 
 .gender {
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
 }
 
-.genderOption{
+.genderOption {
     margin: 20px;
 }
 
 .dateInputWrapper {
     position: relative;
-    cursor: pointer;  
-  }
+    cursor: pointer;
+}
 
-  .dateInputWrapper::after {
+.dateInputWrapper::after {
     content: url('/path-to-your-icon.svg');
     position: absolute;
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
-    pointer-events: none;  
-  }
+    pointer-events: none;
+}
 
 .dateInput {
-    -webkit-appearance: none; 
-    -moz-appearance: none;   
-    appearance: none;    
-    cursor: pointer;   
-  }
-  
-  .dateInput::-webkit-calendar-picker-indicator {
-    cursor: pointer; 
-  }
-  
-  .dateInput {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+.dateInput::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+}
+
+.dateInput {
     background-image: url('/path-to-your-icon.svg');
     background-repeat: no-repeat;
     background-position: right 10px center;
-    padding-right: 45px; 
-  }
+    padding-right: 45px;
+}
 
 
 @media (max-width: 960px) {

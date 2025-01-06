@@ -5,7 +5,7 @@ const OrderSchema = new mongoose.Schema({
 
     userId: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Users', //must be user
+        ref: 'Users', 
         required: true
     },
     showId: {
@@ -31,7 +31,7 @@ const OrderSchema = new mongoose.Schema({
         type: Date,
         default: Date.now
     },
-    userDetails: { // Optional: To store user details directly in the order
+    userDetails: { 
         fullName: String,
         phoneNumber: String,
         email: String,
