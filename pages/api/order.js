@@ -16,9 +16,9 @@ export default async function handler(req, res) {
 }
 async function handleCreateOrder(req, res) {
     try {
-        const { showId, count, price, userDetails } = req.body; // Add userDetails
+        const { showId, count, price, userDetails } = req.body; 
 
-        const userId = '664e09b1959c493a8d50894e'; // Replace with actual user ID from authentication
+        const userId = '664e09b1959c493a8d50894e'; 
 
         const newOrder = new OrderModel({
             userId,
@@ -27,7 +27,6 @@ async function handleCreateOrder(req, res) {
             finalPrice: price * count,
             type: 'draft',
             purchaseDate: new Date(),
-            // userDetails // Save userDetails
         });
 
         const savedOrder = await newOrder.save();
@@ -46,7 +45,7 @@ async function handleUpdateOrder(req, res) {
             orderId,
             { 
                 type: 'payed',
-                userDetails // Add userDetails to the order
+                userDetails
             },
             { new: true }
         );

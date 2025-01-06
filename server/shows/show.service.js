@@ -21,7 +21,6 @@ export const getShowsByCategory = async (category) => {
 
 export const getShowsByArtist = async (artist) => {
   return await ShowModel.find({ artist: artist })
-  // .populate('artist')
 }
 
 

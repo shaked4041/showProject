@@ -24,5 +24,4 @@ export const createNewShow = async (fd) => {
         console.log(error);
         return { message: 'not created' }
     }
-    console.log(obj);
 }

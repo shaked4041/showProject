@@ -11,8 +11,6 @@ import { CgDetailsMore } from 'react-icons/cg';
 import Link from 'next/link'
 import { AiFillPlusCircle } from "react-icons/ai";
 
-
-
 export default function Header() {
 
     const [isOpen, setIsOpen] = useState(false)
@@ -20,7 +18,6 @@ export default function Header() {
     const handleNav = () => {
         setIsOpen(!isOpen)
     }
-
 
     return (
         <div className={`${styles.headerContainer} ${isOpen ? styles.openContainer : ''}`}>

@@ -24,7 +24,7 @@ export default function ContinueButton({ showId, price }) {
       const result = await response.json();
 
       if (result.success) {
-        window.location.href = `/order/${result.order._id}`; // Redirect to order page
+        window.location.href = `/order/${result.order._id}`; 
       } else {
         console.error('Order creation failed:', result.message);
       }

@@ -1,7 +1,7 @@
-"use client"; // Ensures this component is client-side
+"use client"; 
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation'; // Correct import for Next.js 13+
+import { useRouter } from 'next/navigation';
 import styles from './style.module.scss';
 import Link from 'next/link';
 import { IoChevronBackOutline, IoLocationSharp } from "react-icons/io5";
@@ -18,7 +18,7 @@ export default function CompleteOrderClient({ order, pic, partDate, price }) {
     gender: '',
   });
 
-  const router = useRouter(); // This should work correctly now
+  const router = useRouter();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -39,19 +39,17 @@ export default function CompleteOrderClient({ order, pic, partDate, price }) {
         },
         body: JSON.stringify({
           orderId: order._id,
-          userDetails: formData, // Include user details
+          userDetails: formData,
         }),
       });
 
       if (response.ok) {
-        router.push(`/order/${order._id}/completeOrder`); // Correct use of router.push
+        router.push(`/order/${order._id}/completeOrder`); 
       } else {
         console.error('Failed to submit order');
-        // You might want to display an error message to the user
       }
     } catch (error) {
       console.error('An error occurred:', error);
-      // You might want to display an error message to the user
     }
   };
 

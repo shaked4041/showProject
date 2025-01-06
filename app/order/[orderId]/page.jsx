@@ -8,15 +8,14 @@ export default async function page({ params }) {
   const orderId = params.orderId;
   const order = await getFullOrderById(orderId);
 
-  // Convert ObjectId and Buffer to plain values
   const plainOrder = {
     _id: order._id.toString(),
     showId: {
       _id: order.showId._id.toString(),
       title: order.showId.title,
-      artist: order.showId.artist.toString(), // Convert Buffer to string if needed
+      artist: order.showId.artist.toString(),
       location: order.showId.location,
-      picture_of_artist: order.showId.picture_of_artist.toString(), // Convert Buffer to string if needed
+      picture_of_artist: order.showId.picture_of_artist.toString(),
       price_per_ticket: order.showId.price_per_ticket,
     },
     finalPrice: order.finalPrice,

@@ -1,4 +1,4 @@
-import  ArtistModel  from './artist.model'; // Adjust the path to where the model file is located
+import ArtistModel from './artist.model';
 
 export const createArtist = async (fullName, image, description) => {
     if (!fullName || !image || !description) {

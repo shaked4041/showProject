@@ -10,7 +10,6 @@ export default async function page() {
 
   connectToMongo()
 
-
   async function fetchArtists() {
     let artists = await getArtists()
     return artists.map(artist => ({

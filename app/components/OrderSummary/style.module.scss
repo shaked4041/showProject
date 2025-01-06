@@ -1,6 +1,5 @@
 .summaryContainer {
     width: 90%;
-
 }
 
 .topContainer {
@@ -32,13 +31,11 @@
     max-height: 0;
     transition: max-height 0.8s ease-out;
     color: #a29bb1;
-    // width: 90%;
     padding: 10px;
 
 }
 
 .menuContent.open {
-    // width: 90%;
     max-height: 500px;
     transition: max-height 0.8s ease-in;
     color: #a29bb1;
@@ -84,7 +81,6 @@
 .cuponInput {
     outline: none;
     color: white;
-    // background-color: #08041600;
     border: none;
     background-color: transparent;
 

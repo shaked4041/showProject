@@ -5,7 +5,6 @@ import { createArtist } from "../artists/artist.service";
 
 export const createNewArtist = async (fd) => {
     const obj = Object.fromEntries(fd);
-    // console.log("Form Data Object:", obj);
 
     const { fullName, image, description } = obj;
     if (!fullName || !image || !description) {

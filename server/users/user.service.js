@@ -1,4 +1,4 @@
-const UserModel = require('./user.model'); // Import UserModel
+const UserModel = require('./user.model'); 
 
 const createUser = async (fullName, email, password, type) => {
     console.log('Creating user with the following data:', { fullName, email, password, type });

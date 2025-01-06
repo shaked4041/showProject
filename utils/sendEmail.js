@@ -16,8 +16,7 @@ export async function sendOrderConfirmationEmail(to, order) {
         if (!to) {
             throw new Error('No recipient email address provided');
         }
-        
-        // Fetch the show details
+
         const show = await ShowModel.findById(order.showId);
         if (!show) {
             throw new Error('Show not found');
@@ -28,7 +27,6 @@ export async function sendOrderConfirmationEmail(to, order) {
         const finalPrice = order.finalPrice;
         const amountOfTickets = order.amountOfTickets;
 
-        // Log email details for debugging
         console.log('Sending email to:', to);
         console.log('Email details:', {
             fullName,
@@ -71,7 +69,7 @@ export async function sendOrderConfirmationEmail(to, order) {
                 <p>Best regards,<br>The Event Team</p>
             `
         };
-        
+
         await transporter.sendMail(mailOptions);
         console.log('Email sent successfully');
     } catch (error) {

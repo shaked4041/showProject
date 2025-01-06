@@ -4,7 +4,6 @@ import { IoIosArrowUp } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
 import styles from './style.module.scss'
 
-
 export default function OrderSummary({  finalPrice: propFinalPrice, price, amount }) {
 
     const [isOpen, setIsOpen] = useState(false)
