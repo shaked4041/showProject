@@ -1,21 +1,15 @@
 const mongoose = require('mongoose')
+ import ArtistModel from '../artists/artist.model';
+ import UserModel from '../users/user.model'; // Import if used elsewhere
 
 const ShowSchema = new mongoose.Schema({
     artist: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Artists'
+    },
+    creatorName: {
         type: String,
         required: true
-    },
-    artistId: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'artist'
-    },
-    creatorName: {  
-        type: String,
-        required: true
-    },
-    creatorId: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'user' //must be admin
     },
     category: {
         type: String,
@@ -29,10 +23,10 @@ const ShowSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    // production: {
-    //     type: String,
-    //     required: true
-    // },
+    production: {
+        type: String,
+        required: true
+    },
     date: {
         type: Date,
         required: true
@@ -56,4 +50,6 @@ const ShowSchema = new mongoose.Schema({
 })
 
 
-export const ShowModel = mongoose.models?.Shows || mongoose.model('Shows', ShowSchema)
+const ShowModel = mongoose.models?.Shows || mongoose.model('Shows', ShowSchema)
+export default ShowModel;
+

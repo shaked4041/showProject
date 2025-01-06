@@ -26,6 +26,7 @@
                 gap: 15px;
                 text-decoration: none;
                 color: white;
+                // padding-left: 20px;
 
                 .backIcon {
                     font-size: 30px;
@@ -52,39 +53,44 @@
             justify-content: center;
             gap: 10px;
 
-            .bodyLeft {
-                width: 40%;
-                height: 200px;
+            .leftContainer {
+
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
+                width: 40%;
 
-                .picture {
-                    width: 100px;
-                    height: 100px;
-                    border-radius: 15px;
-                    // padding: 10px;
-                }
-
-                .details {
+                .bodyLeft {
+                    height: 200px;
                     display: flex;
-                    flex-direction: column;
-                    padding-left: 10px;
+                    flex-direction: row;
 
-                    .artist {
-                        color: rgb(255, 255, 255);
-                        font-size: 22px;
-                        display: block;
-                        flex-wrap: wrap;
+                    .picture {
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 15px;
                     }
 
-                    .locationCont {
-                        color: #a29bb1;
-                        font-size: 18px;
-                    }
+                    .details {
+                        display: flex;
+                        flex-direction: column;
+                        padding-left: 10px;
 
-                    .dateCont {
-                        color: #a29bb1;
-                        font-size: 18px;
+                        .artist {
+                            color: rgb(255, 255, 255);
+                            font-size: 22px;
+                            display: block;
+                            flex-wrap: wrap;
+                        }
+
+                        .locationCont {
+                            color: #a29bb1;
+                            font-size: 18px;
+                        }
+
+                        .dateCont {
+                            color: #a29bb1;
+                            font-size: 18px;
+                        }
                     }
                 }
             }
@@ -102,7 +108,7 @@
                 .priceTicket {
                     display: flex;
                     justify-content: center;
-
+                    flex-wrap: wrap;
                 }
 
                 .buyTicketContainer {
@@ -160,10 +166,85 @@
 
 }
 
+.inputLabel {
+    background-color: transparent;
+    color: #827d9b;
+    font-size: 10px;
+    margin: 20px;
+}
+
+
+.inputType {
+    background-color: transparent;
+    display: block;
+    border: none;
+    border-bottom: 0.8px white solid;
+    outline: none;
+    color: white;
+    margin-top: 15px;
+    padding-bottom: 10px;
+    padding-left: 13px;
+
+    ::placeholder {
+        color: rgb(255, 255, 255);
+    }
+}
+
+.genderContainer {
+    margin-right: auto;
+    padding-left: 84px;
+}
+
+.gender {
+    display: flex;
+    justify-content:space-around;
+}
+
+.genderOption{
+    margin: 20px;
+}
+
+.dateInputWrapper {
+    position: relative;
+    cursor: pointer;  
+  }
+
+  .dateInputWrapper::after {
+    content: url('/path-to-your-icon.svg');
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;  
+  }
+
+.dateInput {
+    -webkit-appearance: none; 
+    -moz-appearance: none;   
+    appearance: none;    
+    cursor: pointer;   
+  }
+  
+  .dateInput::-webkit-calendar-picker-indicator {
+    cursor: pointer; 
+  }
+  
+  .dateInput {
+    background-image: url('/path-to-your-icon.svg');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 45px; 
+  }
+
+
 @media (max-width: 960px) {
     .purchContainer .bodyCont .pageBody {
         display: flex;
         flex-direction: column;
+
+        .leftContainer {
+            width: 100%;
+        }
 
         .bodyLeft {
             width: 100%;

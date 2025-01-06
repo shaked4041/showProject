@@ -1,0 +1,55 @@
+.homeContainer {
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+}
+
+.home {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.showCard {
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+    text-decoration: none;
+    color: black;
+
+
+    &:hover {
+        transform: scale(1.05);
+        transition: ease-in-out 200ms;
+    }
+}
+
+.showImg {
+    border-radius: 8px;
+    width: 100%;
+
+}
+
+.title {
+    width: 80%;
+    font-weight: 700;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.img {
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.artistName {
+    font-size: 40px;
+    font-weight: 700;
+}

@@ -7,11 +7,7 @@
     flex-direction: row;
     align-items: center;
     border-bottom: 0.5px solid var(--hover-main);
-
-    &.openContainer {
-        // background-color: rgb(0, 0, 0);
-    }
-
+    
     .titleHeader {
         margin-left: 20px;
         cursor: pointer;
@@ -48,6 +44,18 @@
             z-index: 100;
         }
     }
+    .plusIcon{
+        font-size: 25px;
+        margin: 10px;
+        cursor: pointer;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .loginLink{
+        text-decoration: none;
+        color: inherit;
+    }
 
     .signIn {
         display: flex;
@@ -57,6 +65,12 @@
         align-items: center;
         cursor: pointer;
         padding-right: 12px;
+        text-decoration: none;
+
+        .signText{
+            text-decoration: none;
+
+        }
 
         .searchComp {
             font-size: 50px;
@@ -75,7 +89,7 @@
         }
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: 900px) {
         .signIn {
 
             margin-left: 0px;
@@ -83,6 +97,8 @@
             .signText {
                 display: none;
                 width: 0px;
+                text-decoration: none;
+
             }
         }
 
@@ -93,8 +109,6 @@
         .navIcon {
             display: block;
         }
-
-        .searchComp {}
     }
 }
 

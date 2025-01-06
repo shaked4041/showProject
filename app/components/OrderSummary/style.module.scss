@@ -1,0 +1,101 @@
+.summaryContainer {
+    width: 90%;
+
+}
+
+.topContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+}
+
+.summary {
+    color: #ffffff50;
+    white-space: nowrap;
+}
+
+
+.topLine {
+    background-color: var(--hover-main);
+    height: 0.8px;
+    width: 100%;
+}
+
+.arrow {
+    cursor: pointer;
+}
+
+.menuContent {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.8s ease-out;
+    color: #a29bb1;
+    // width: 90%;
+    padding: 10px;
+
+}
+
+.menuContent.open {
+    // width: 90%;
+    max-height: 500px;
+    transition: max-height 0.8s ease-in;
+    color: #a29bb1;
+    padding: 10px;
+}
+
+.spansContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.biggerSpans {
+    font-size: 17px;
+}
+
+.topSpan {
+    padding-bottom: 10px;
+}
+
+.smallerSpans {
+    font-size: 14px;
+}
+
+.totalContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.cuponContainer {
+    margin-top: 40px;
+    border-bottom: 1px white solid;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cuponInput {
+    outline: none;
+    color: white;
+    // background-color: #08041600;
+    border: none;
+    background-color: transparent;
+
+    &::placeholder {
+        color: #a29bb1;
+    }
+}
+
+.applyButton {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}

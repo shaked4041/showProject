@@ -1,15 +1,18 @@
-import { getShowById } from '@/server/events/show.service'
+import { getFullShowById } from '@/server/shows/show.service'
 import styles from './style.module.scss'
 import Link from 'next/link'
 import { IoLocationSharp } from "react-icons/io5";
 import { FaRegCalendarCheck } from "react-icons/fa";
 import moment from 'moment';
 import { LuDot } from "react-icons/lu";
+import { connectToMongo } from '@/server/connectToMongo';
 
 
 export default async function page({ params }) {
+  await connectToMongo()
   const showId = params.showId
-  const show = await getShowById(showId)
+  const show = await getFullShowById(showId)
+  console.log(show);
   const pic = show.picture_of_artist
   const date = show.date
   const formatedFullDate = moment(date).format('MMM D, YYYY h:mm A');
@@ -36,8 +39,8 @@ export default async function page({ params }) {
               <div className={styles.artistCont}>
                 <span>{show.production}</span>
                 <LuDot />
-                <Link href={`/artist/${show.artist}`} className={styles.artistName}>
-                  <span >{show.artist}</span>
+                <Link href={`/artist/${show.artist._id}`} className={styles.artistName}>
+                  <span >{show.artist.fullName}</span>
                 </Link>
               </div>
 
@@ -51,25 +54,25 @@ export default async function page({ params }) {
                 <span>{formatedFullDate}</span>
               </div>
 
-            <ul className={styles.extraInfo}>
-              <li>
-                {partDate}
-              </li>
-              <li>
-                {show.production}
-              </li>
-            </ul>
+              <ul className={styles.extraInfo}>
+                <li>
+                  {partDate}
+                </li>
+                <li>
+                  {show.production}
+                </li>
+              </ul>
 
-            <div className={styles.whatsupDits}>
-              <div>
-                Table Reservations:
+              <div className={styles.whatsupDits}>
+                <div>
+                  Table Reservations:
+                </div>
+                WhatsApp:
+                <div>
+                  +1 (718) 614-2563
+                </div>
+                Email: info@tcepresents.com
               </div>
-              WhatsApp:
-              <div>
-                +1 (718) 614-2563
-              </div>
-              Email: info@tcepresents.com
-            </div>
 
             </div>
           </div>
